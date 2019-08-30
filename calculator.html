@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../MyPractice Task/BootStrap/resetcssFile.css">
+    <link rel="stylesheet" href="../Devolopment/Online_Registration/css/bootstrap.min.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+
+
+        <h1>Simple Calculator</h1>
+
+        <form action="#">
+            Enter a Value : <input type="text" id="value1">
+            Enter b value : <input type="text" id="value2">
+            <br>
+            Operator:
+            <select name="" id="operator">
+                <option value="add">Addition</option>
+                <option value="sub">Substraction</option>
+                <option value="mul">Multiplication</option>
+                <option value="div">Divide</option>
+            </select>
+            <button onclick="calc()">Calculte</button>
+            <p id="result"></p>
+        </form>
+    </div>
+    
+    <script>
+        function calc() {
+            var a = parseInt(document.querySelector("#value1").value);
+            var b = parseInt(document.querySelector("#value2").value);
+            var op = document.querySelector("#operator").value;
+            var calculate;
+            if (op == "add") {
+                calculate = a + b;
+            }
+            else  if (op == "sub") {
+                calculate = a - b;
+            }else if (op == "mul") {
+                calculate = a * b;
+            }else if (op == "div") {
+                calculate = a / b;
+            }
+
+            document.querySelector("#result").innerHTML = calculate;
+
+        }
+       
+    </script>
+</body>
+
+</html>
